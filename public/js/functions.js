@@ -75,4 +75,5 @@ function changeValue() {
 
 function closeModal(){
     $('#myModal').remove();
+    $('.modal-overlay').remove();
 }
