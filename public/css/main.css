@@ -8,7 +8,7 @@ a {
 
 .modal {
 	position: absolute;
-	width: 100%;
+	width: 99%;
 	height: 88%;
 	z-index: 999;
 	background: #fff;
