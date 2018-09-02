@@ -1,609 +1,154 @@
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-      <title>acesso score</title>
-      <link href="https://www.serasaconsumidor.com.br/static/css/main.7f271efa.css" rel="stylesheet">
-      <style>
-         .modal {
-         position: absolute;
-         top: 11px;
-         width: 100%;
-         height: 89%;
-         z-index: 999;
-         background: #fff;
-         background: -webkit-linear-gradient(#fff, whiteSmoke);
-         background: -moz-linear-gradient(#fff, whiteSmoke);
-         background: -o-linear-gradient(#fff, whiteSmoke);
-         background: linear-gradient(#fff, whiteSmoke);
-         border: 1px solid #ddd;
-         border-radius: 6px;
-         box-shadow: 0 0 10px 1px #eee;
-         }
-         .modal-close {
-         margin-left: 9px;
-         position: absolute;
-         top: 12px;
-         color: 2B2B3A;
-         text-decoration: none;
-         }
-         .modal-overlay {
-         display: none;
-         position: fixed;
-         top: 0;
-         left: 0;
-         height: 100%;
-         width: 100%;
-         z-index: 100;
-         background: #fff;
-         }
-         .viewport{
-         margin-top: -50px;
-         width: 100%;
-         height: 100%;
-         }
 
-         .progressbar {
-  		    display: inline-block;
-  		    width: 100px;
-  		    margin: 25px;
-		}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <title>Acesso Score</title>
+    <link href="public/css/details.css" rel="stylesheet">
+    <link href="public/css/main.css" rel="stylesheet">
+</head>
 
-    #loader {  
-       position: fixed;
-        width: 100%;
-        height: 90%;
-        z-index: 9999;
-        background: url('https://i.gifer.com/5sPg.gif') 50% 50% no-repeat #656565;
-}
-		.circle {
-		    width: 17%;
-		    margin: 0 auto;
-		    margin-top: 10px;
-		    display: inline-block;
-		    position: relative;
-		    text-align: center;
-		}
-		.circle canvas {
-		    vertical-align: middle;
-		    height: 50px !important;
-    		width: 50px !important;
-		}
-		.circle div {
-	        position: absolute;
-		    top: 5px;
-		    left: 0;
-		    width: 64%;
-		    text-align: center;
-		    line-height: 40px;
-		    font-size: 10px;
-    		margin-left: 10px;
-		}
-		.circle strong i {
-		    font-style: normal;
-		    font-size: 0.6em;
-		    font-weight: normal;
-		}
-		.circle span {
-		    display: block;
-		    color: #aaa;
-		    margin-top: 12px;
-		}
-		.circle p{
-			display: inline-block;
-		    width: 100px;
-		    /* height: 100px; */
-		    /* padding: 5px; */
-		    /* border: 1px solid blue; */
-		    /* background-color: yellow; */
-		    margin-top: -37px;
-		    margin-left: 55px;
-		    font-size: 10px;
-
-		}
-
-		.circleLiar {
-		   margin-left: 22em;
-		  list-style-type: none;
-		}
-
-    .title{
-     text-align: center;
-    padding-top: 40px;
-    font-weight: bold;
-    }
-
-    .textModal{
-     margin-left: 54px;
-    padding-top: 35px;
-    width: 263px;
-    justify-content: center;
-    }
-
-    .imgModal{
-          width: 173px;
-    margin-left: 93px;
-
-    /* text-align: center; */
-    margin-top: 29px;
-    }
-
-      </style>
-   </head>
-   <body class="nsc valgrind-auth" style="height: 100%">
-      <ul id="hpane" class="viewport" style="position:fixed !important; overflow: hidden;">
-         <li style="position: absolute; display: block; width: 316.797px; height: 564.609px; left: 0px; margin-left: 0px;">
+<body class="nsc valgrind-auth" style="height: 100%">
+    <ul id="hpane" class="viewport" style="position:fixed !important; overflow: hidden;">
+        <li style="position: absolute; display: block; width: 316.797px; height: 564.609px; left: 0px; margin-left: 0px;">
             <section>
-               <img src="https://eu.acesso.io/imagens/logo.png" style="
+                <img src="public/img/logo.png" style="
                   width: 82px;
                   /* margin-left: -255px; */
                   margin-top: 8px;
                   ">
-               <div class="nsc__profile__header">
-                  <hr class="vertical">
-                  <div class="nsc__score__chart">
-                     <link rel="stylesheet" href="https://s3.amazonaws.com/s3-ecs-auth-navbar-prd.ecsbr.net/bar/static/css/base.min.css">
-                     <h2 style="
+                <div class="nsc__profile__header">
+                    <hr class="vertical">
+                    <div class="nsc__score__chart">
+                        <link rel="stylesheet" href="https://s3.amazonaws.com/s3-ecs-auth-navbar-prd.ecsbr.net/bar/static/css/base.min.css">
+                        <h2 style="
                         margin-left: -5px;
                         margin-top: -98px;
                         ">
-                        Acesso Score
-                        <div style="display: inline-block;">
-                        </div>
-                     </h2>
-                     <div class="nsc__score__chart--circle" style="
+                            Acesso Score
+                            <div style="display: inline-block;">
+                            </div>
+                        </h2>
+                        <div class="nsc__score__chart--circle" style="
                         margin-top: 89px;
                         ">
-                        <div class="percentagecircle__circle" style="width: 110px;height: 110px;border-radius: 55px;background-color: rgb(227, 227, 227);">
-                           <div class="percentagecircle__left-wrap" style="width: 0;height: 115px;left: 0px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;background-color: #F0047F;transform: rotate(180deg);">
-                              <div class="percentagecircle__loader" style="left: 55px;width: 55px;height: 110px;border-top-left-radius: 0px;border-bottom-left-radius: 0px;background-color: #F0047F;transform: rotate(18deg);"></div>
-                           </div>
-                           <div class="percentagecircle__right-wrap" style="width: 55px; height: 110px; left: 55px;">
-                              <div class="percentagecircle__loader2" style="left: -55px;width: 55px;height: 115px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;background-color: #F0047F;transform: rotate(180deg);"></div>
-                           </div>
-                           <div style="left: 6px; top: 6px; width: 98px; height: 98px; border-radius: 49px; background-color: rgb(255, 255, 255); z-index: 100;" class="percentagecircle__inner-circle">
-                              <div><span id="meuScore" class="nsc__score__chart--title" style="color: #F0047F;display: block;">545</span><span class="nsc__score__chart--desc">/1000</span></div>
-                           </div>
+                            <div class="percentagecircle__circle" style="width: 110px;height: 110px;border-radius: 55px;background-color: rgb(227, 227, 227);">
+                                <div class="percentagecircle__left-wrap" style="width: 0;height: 115px;left: 0px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;background-color: #F0047F;transform: rotate(180deg);">
+                                    <div class="percentagecircle__loader" style="left: 55px;width: 55px;height: 110px;border-top-left-radius: 0px;border-bottom-left-radius: 0px;background-color: #F0047F;transform: rotate(18deg);"></div>
+                                </div>
+                                <div class="percentagecircle__right-wrap" style="width: 55px; height: 110px; left: 55px;">
+                                    <div class="percentagecircle__loader2" style="left: -55px;width: 55px;height: 115px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;background-color: #F0047F;transform: rotate(180deg);"></div>
+                                </div>
+                                <div style="left: 6px; top: 6px; width: 98px; height: 98px; border-radius: 49px; background-color: rgb(255, 255, 255); z-index: 100;" class="percentagecircle__inner-circle">
+                                    <div><span id="meuScore" class="nsc__score__chart--title" style="color: #F0047F;display: block;">545</span><span class="nsc__score__chart--desc">/1000</span></div>
+                                </div>
+                            </div>
                         </div>
-                     </div>
-                  </div>
-                  <div class="nsc__score__content" style="
+                    </div>
+                    <div class="nsc__score__content" style="
                      padding-bottom: 21px;
                      ">
-                     <h2 style="
+                        <h2 style="
                         text-align: center;
                         /* margin-left: 66px; */
                         ">Você possui direito á <span id="meuAumento"><strong style="color: #F0047F;">R$486.00</strong></span> de aumento</h2>
-                  </div>
-               </div>
+                    </div>
+                </div>
             </section>
             <section>
-               <a href="#" onclick="openModal('Parabéns Richard Henrique', 'Seu novo salário é de R$4086.00, por favor levar ao Departamento Pessoal sua carteira para readequação de salário, no próximo mês seu novo valor já estará disponinel em folha.', 'https://www.klaud9.com/assets/img/congratulations-icon.png');changeValue()" style="text-decoration:none">
-                  <h1 style="
+                <a href="#" onclick="openModal('Parabéns Richard Henrique', 'Seu novo salário é de R$4086.00, por favor levar ao Departamento Pessoal sua carteira para readequação de salário, no próximo mês seu novo valor já estará disponinel em folha.', 'public/img/congratulations.png');changeValue()" style="text-decoration:none">
+                    <h1 style="
                      color: #2B2B3A;
                      margin-left: 231px;
                      font-size: 15px !important;
                      margin-top: 124px;
                      ">Meu Salário</h1>
-                  <h1 style="
+                    <h1 style="
                      font-size: 12px !important;
                      margin-top: -15px;
                      margin-left: 245px;
                      "><b style="
                      color: #822153;
                      "><span id="meuSalario">R$3.600,00</span></b></h1>
-                  <h1 style="
+                    <h1 style="
                      color: #2B2B3A;
                      font-size: 7px !important;
                      margin-top: -19px;
                      margin-left: 252px;
                      ">Solicitar Aumento</h1>
-               </a>
+                </a>
             </section>
-         </li>
-         <li style="background-color: rgb(43, 43, 58); position: absolute; display: block; width: 316.797px; height: 564.609px; left: 316.797px; margin-left: 0px;">
+        </li>
+        <li style="background-color: rgb(43, 43, 58); position: absolute; display: block; width: 316.797px; height: 564.609px; left: 316.797px; margin-left: 0px;">
             <ul class='circleLiar'>
-			<li>
-			<div class="progressbar" data-animate="false">
-			    <div class="circle" color="black" data-percent="93">
-			        <div></div>
-			       <p>CORUJÃO ACESSO <a onclick="openModal('CORUJÃO ACESSO', 'O corujão acesso é dedicado aos seres que extendem suas atividades ao extremo, pessoas que muitas vezes ficam alem do seu horario,passando de 8, 12, 15 horas trabalhando e fazendo seu tabalho com total dedicação, seja home office ou presencial', 'http://www.averybunch.com/files/2017/02/doodle-ly-logotype-1l0wiu5.svg')" href="#"><img src="https://cdn2.iconfinder.com/data/icons/app-types-in-grey/512/info_512pxGREY.png" style="
+                <li>
+                    <div class="progressbar" data-animate="false">
+                        <div class="circle" color="black" data-percent="93">
+                            <div></div>
+                            <p>CORUJÃO ACESSO <a onclick="openModal('CORUJÃO ACESSO', 'O corujão acesso é dedicado aos seres que extendem suas atividades ao extremo, pessoas que muitas vezes ficam alem do seu horario,passando de 8, 12, 15 horas trabalhando e fazendo seu tabalho com total dedicação, seja home office ou presencial', 'public/img/coruja.svg')" href="#"><img src="public/img/info.png" style="
                 width: 10px;
                 margin-left: 15em;
                 margin-top: -12px;
             "><img></a></p>
-			    </div>
-			</div>
-			</li>
-			<li>
-			<div class="progressbar" data-animate="false">
-			    <div class="circle" color="green" data-percent="30.5">
-			        <div></div>
-			        <p>DESEMPENHO <a onclick="openModal('SEU DESEMPENHO', 'No ultimo trimetre você preencheu 3 das 12 avaliações semanais. Você foi avaliado avaliado em 40% pelo seu head na avaliação trimestral.', 'http://www.mpf.mp.br/conheca-o-mpf/gestao-estrategica-e-modernizacao-do-mpf/imagens/desempenho.png/image_preview')" href="#"><img src="https://cdn2.iconfinder.com/data/icons/app-types-in-grey/512/info_512pxGREY.png" style="
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="progressbar" data-animate="false">
+                        <div class="circle" color="green" data-percent="30.5">
+                            <div></div>
+                            <p>DESEMPENHO <a onclick="openModal('SEU DESEMPENHO', 'No ultimo trimetre você preencheu 3 das 12 avaliações semanais. Você foi avaliado avaliado em 40% pelo seu head na avaliação trimestral.', 'public/img/desempenho.png')" href="#"><img src="public/img/info.png" style="
                 width: 10px;
                 margin-left: 15em;
                 margin-top: -12px;
             "><img></a></p>
-			    </div>
-			</div>
-			</li>
-			<li>
-			<div class="progressbar" data-animate="false">
-			    <div class="circle" color="#ff4400d1" data-percent="58">
-			        <div></div>
-              <p>DEU SHOW <a href="#"><img onclick="openModal('DEU SHOW', 'Durante o ultimo trimestre, você indicou 162 pessoas para o deu show, foi indicado por 462 pessoas e ganhou 2 vezes.', 'https://img.clipartxtras.com/f98f0f4e775d5aefdaa331835c0599fe_microphone-drawing-tumblr-clipartxtras-mic-drawing-tumblr_266-266.png')" src="https://cdn2.iconfinder.com/data/icons/app-types-in-grey/512/info_512pxGREY.png" style="
-                width: 10px;
-                margin-left: 15em;
-                margin-top: -12px;
-            "><img></a></p>			    </div>
-			</div>
-			</li>
-			<li>
-			<div class="progressbar" data-animate="false">
-			    <div class="circle" color="#025aa5" data-percent="49">
-			        <div></div>
-			          <p>RUI JORDÃO <a onclick="openModal('TROFEU RUI JORDÃO', 'O Trofeu Rui Jordão é entregue aos seres acessos que se destacam no ano, durante o periodo que você entrou na acesso, concorreu a 3 vezes ao prémio e ganhou 1.', 'https://static.ngamers.net/awards/ribbon.png.19ebc6fb332542037142d3b9e989a0de.png')" href="#"><img src="https://cdn2.iconfinder.com/data/icons/app-types-in-grey/512/info_512pxGREY.png" style="
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="progressbar" data-animate="false">
+                        <div class="circle" color="#ff4400d1" data-percent="58">
+                            <div></div>
+                            <p>DEU SHOW <a href="#"><img onclick="openModal('DEU SHOW', 'Durante o ultimo trimestre, você indicou 162 pessoas para o deu show, foi indicado por 462 pessoas e ganhou 2 vezes.', 'public/img/deushow.png')" src="public/img/info.png" style="
                 width: 10px;
                 margin-left: 15em;
                 margin-top: -12px;
             "><img></a></p>
-			    </div>
-			</div>
-			</li>
-			<li>
-			
-			<div class="progressbar" data-animate="false">
-			    <div class="circle" color="#F0047F" data-percent="38">
-			        <div></div>
-			       <p>SER MERECEDOR <a onclick="openModal('SER MERECEDOR', 'O Trofeu Ser Merecedor é entregue aos seres acessos que se destacam no ano, durante o periodo que você entrou na acesso, concorreu a 6 vezes ao prémio e ganhou 3.', 'https://static.ngamers.net/awards/ribbon.png.19ebc6fb332542037142d3b9e989a0de.png')" href="#"><img src="https://cdn2.iconfinder.com/data/icons/app-types-in-grey/512/info_512pxGREY.png" style="
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="progressbar" data-animate="false">
+                        <div class="circle" color="#025aa5" data-percent="49">
+                            <div></div>
+                            <p>RUI JORDÃO <a onclick="openModal('TROFEU RUI JORDÃO', 'O Trofeu Rui Jordão é entregue aos seres acessos que se destacam no ano, durante o periodo que você entrou na acesso, concorreu a 3 vezes ao prémio e ganhou 1.', 'public/img/medalha.png')" href="#"><img src="public/img/info.png" style="
+                width: 10px;
+                margin-left: 15em;
+                margin-top: -12px;
+            "><img></a></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+
+                    <div class="progressbar" data-animate="false">
+                        <div class="circle" color="#F0047F" data-percent="38">
+                            <div></div>
+                            <p>SER MERECEDOR <a onclick="openModal('SER MERECEDOR', 'O Trofeu Ser Merecedor é entregue aos seres acessos que se destacam no ano, durante o periodo que você entrou na acesso, concorreu a 6 vezes ao prémio e ganhou 3.', 'public/img/medalha.png')" href="#"><img src="public/img/info.png" style="
                 width: 10px;
                 margin-left: 15em;
                 margin-top: -12px;
             "><img></a></p>
 
-            <img src="https://eu.acesso.io/imagens/logo.png" style="margin-top: 40px;margin-left: 17em;"></img>
-			    </div>
-			</div>
-			</li>
-			
-			</ul>
-         </li>
-         </div>
-      </ul>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script>
-         function openModal(title, textModal, imgModal) {
-          setTimeout(function() {    
-              fullyLoaded();
-              }, 1000);
-
-          function fullyLoaded() {
-              $("#loader").fadeOut("slow");
-          }
-
-          var defaults = {
-            slideFrom: 'left',
-            overlay: true,
-            closeKey: 27
-          },
-          modalTmp = $('<div class="modal"><div id="loader"><div></div>').append('<div class="title">'+ title +'</div><div class="textModal">'+ textModal +'</div><img class="imgModal" src="'+imgModal+'"/><a href="#" class="modal-close"><img style="width: 26px;margin-left: -19em;opacity: 0.65;" src="https://radiostudent.si/sites/default/files/slike/2017-01-30-to-ni-politi%C4%8Dn-pundelk-67538.png"></img></a>');
-          overlay = $(document.createElement('div')).addClass('modal-overlay').css('opacity', 0.8);
-         
-          $.modal = function (msg, options) {
-            msg = $(msg).length ? $(msg).html() : msg;
-         
-            options = $.extend({}, defaults, options);
-         
-            var isOpen = true;
-         
-            if (!$('.modal').length) {
-              modalTmp.appendTo('body');
-            }
-         
-            modalTmp.append(msg).animate({
-              top: '11%'
-            });
-         
-            if (options.overlay) {
-              if (!$('.overlay').length) {
-                overlay.appendTo('body');
-              }
-              overlay.fadeIn();
-            }
-         
-            $(document).on('modal:close', function () {
-              modalTmp.stop().animate({
-                top: '100%'
-              }, function () {
-                $(this).contents().filter(function () {
-                  return !$(this).is('.modal-close');
-                }).remove();
-              });
-              overlay.fadeOut();
-              isOpen = false;
-            });
-         
-            $(document).on('click touchend', '.modal-overlay, .modal-close', function (e) {
-              if (!isOpen || $(e.target).is('.modal')) return;
-              $(this).trigger('modal:close');
-            });
-            $(document).keydown(function (e) {
-              if (e.which !== options.closeKey) return;
-              $(this).trigger('modal:close');
-            });
-          };
-          // uncomment to replace the default `alert()`
-          // window.alert = $.modal;
-         }
-      </script>      
-      <script>
-        $('a').click(function () {
-            $.modal();
-         });
-         $.fn.scrollpane = function(options) {
-         
-          options = $.extend({
-              direction: "horizontal",
-              deadzone: 25,
-              useTransition: false,
-              desktop: true,
-              setupCss: true,
-              onscroll: function(pos, page, duration) {},
-              onscrollfinish: function(pos, page) {}
-          }, options);
-         
-          var isTouch = "ontouchend" in document || !options.desktop,
-              onTouchstart = isTouch ? "touchstart" : "mousedown",
-              onTouchmove = isTouch ? "touchmove" : "mousemove",
-              onTouchend = isTouch ? "touchend" : "mouseup";
-         
-         
-         
-          return this.each(function() {
-         
-              // the scroll pane viewport
-              var outerElem = $(this);
-         
-              // a large div containing the scrolling content
-              var innerElem = $("<div></div>");
-         
-              innerElem.append(outerElem.children());
-         
-              outerElem.append(innerElem);
-         
-              // cache these for later
-              var outerWidth = outerElem.width();
-              var outerHeight = outerElem.height();
-         
-              // boolean
-              var horizontal = (options.direction === "horizontal");
-         
-              // the number of pixels the user has to drag and release to trigger a page transition
-              // natural
-              var deadzone = Math.max(0, options.deadzone);
-         
-              // the index of the current page. changed after the user completes each scrolling gesture.
-              // integer
-              var currentPage = 0;
-         
-              // width of a page
-              // integer
-              var scrollUnit = horizontal ? outerWidth : outerHeight;
-         
-              // x coordinate on the transform. -ve numbers go to the right,
-              // so this goes -ve as currentPage goes +ve
-              // integer (pixels)
-              var currentPos = 0;
-         
-         
-              // min and max scroll position:
-              // integer (pixels)
-              var scrollMax = 0;
-         
-              var scrollMin = -scrollUnit * (innerElem.children().length - 1);
-         
-              // time to settle after touched:
-              // natural (ms)
-              var settleTime = 200;
-         
-         
-              // dragMid and dragEnd are updated each frame of dragging:
-              // integer (pixels)
-              var dragStart = 0; // touch position when dragging starts
-              var dragMid = 0; // touch position on the last touchmove event
-              var dragEnd = 0; // touch position on this touchmove event
-              // +1 if dragging in +ve x direction, -1 if dragging in -ve x direction
-              // U(-1, +1)
-              var dragDir = 0;
-         
-              if (options.setupCss) {
-         
-                  outerElem.css({
-                      position: "relative",
-                      overflow: "hidden"
-                  });
-         
-                  // position the pages:
-                  innerElem.children().each(function(index) {
-                      $(this).css({
-                          position: "absolute",
-                          display: "block",
-                          width: outerWidth,
-                          height: outerHeight
-                      }).css(horizontal ? "left" : "top", scrollUnit * index);
-                  });
-         
-              }
-         
-              // natural natural boolean -> void
-         
-              function scrollTo(position, duration, finish) {
-                  var parameters = {};
-                  parameters[(horizontal ? 'marginLeft' : 'marginTop')] = position;
-         
-                  options.onscroll(position, -position / scrollUnit, duration);
-         
-                  if (options.useTransition) {
-                      innerElem.css({
-                          transition: "none",
-                          transform: horizontal ? ("translate3d(" + position + "px, 0, 0)") : ("translate3d(0, " + position + "px, 0)")
-                      });
-                  }
-         
-         
-                  if (finish) {
-                      if (!options.useTransition) {
-                          innerElem.find('li').animate(parameters, duration);
-                      } else {
-                          innerElem.css({
-                              transition: "all " + (duration === 0 ? "0" : duration + "ms")
-                          });
-                      }
-                      setTimeout(function() {
-                          options.onscrollfinish(position, -position / scrollUnit, duration);
-                      });
-                  } else if (!options.useTransition) {
-                      innerElem.find('li').stop().css(parameters);
-                  }
-              }
-         
-              // Immediately set the 3D transform on the scroll pane.
-              // This causes Safari to create OpenGL resources to manage the animation.
-              // This sometimes causes a brief flicker, so best to do it at page load
-              // rather than waiting until the user starts to drag.
-              scrollTo(0, 0, true);
-         
-         
-         
-         
-              // bind the touch drag events:
-              outerElem.on(onTouchstart, function(e) {
-                  e = isTouch ? e.originalEvent.touches[0] || e.originalEvent.changedTouches[0] : e;
-                  dragStart = dragEnd = dragMid = horizontal ? e.pageX : e.pageY;
-         
-                  // bind the touch drag event:
-                  $(this).on(onTouchmove, function(e) {
-                      e = isTouch ? e.originalEvent.touches[0] || e.originalEvent.changedTouches[0] : e;
-         
-                      dragEnd = horizontal ? e.pageX : e.pageY;
-                      dragDir = (dragEnd - dragMid) > 0 ? 1 : -1;
-                      currentPos += dragEnd - dragMid;
-                      dragMid = dragEnd;
-                      scrollTo(currentPos, 0, false);
-                  });
-         
-                  // bind the touch end event
-              }).on(onTouchend, function(e) {
-         
-                  // boolean
-                  var reset = Math.abs(dragEnd - dragStart) < deadzone;
-         
-                  // real
-                  var scrollPage = -1.0 * currentPos / scrollUnit;
-         
-                  // natural
-                  var nextPage = reset ? currentPage : (dragDir < 0 ? Math.ceil(scrollPage) : Math.floor(scrollPage));
-         
-                  // int
-                  var nextPos = Math.max(scrollMin, Math.min(scrollMax, -scrollUnit * nextPage));
-         
-                  currentPos = nextPos;
-                  currentPage = nextPage;
-         
-                  scrollTo(nextPos, settleTime, true);
-                  outerElem.off(onTouchmove);
-         
-              });
-         
-              // set up the menu callback:
-              outerElem.data("showpage", function(page) {
-                  // int
-                  page = page < 0 ? innerElem.children().length + page : page;
-                  currentPos = Math.max(scrollMin, Math.min(scrollMax, -page * scrollUnit));
-                  currentPage = -currentPos / scrollUnit;
-                  scrollTo(currentPos, settleTime, true);
-              });
-         
-          });
-         };
-         
-         $.fn.showpage = function(index) {
-             var fn = this.data("showpage");
-             fn(index);
-             return this;
-         };
-         
-         
-         $(document).bind("touchmove", function() {
-             return false;
-         });
-         
-         $(function() {
-             $("#hpane").scrollpane();
-         
-             $("#vpane").scrollpane({
-                 direction: 'vertical',
-                 onscroll: function(pos, page, duration) {
-                     $("#pos").text(pos);
-                     $("#page").text(page);
-                     $("#snapping").text("no");
-                 },
-                 onscrollfinish: function(pos, page) {
-                     $("#pos").text(pos);
-                     $("#page").text(page);
-                     $("#snapping").text("yes");
-                 }
-             });
-         
-             $("ul.pager li").click(function() {
-                 var index = $(this).index();
-                 $("#hpane").showpage(index);
-                 $("#vpane").showpage(index);
-             });
-         
-             $("input").click(function() {
-                 alert(this.value);
-             });
-
-             function animateElements() {
-		        $('.progressbar').each(function () {
-		            var elementPos = $(this).offset().top;
-		            var topOfWindow = $(window).scrollTop();
-		            var percent = $(this).find('.circle').attr('data-percent');
-		            var color = $(this).find('.circle').attr('color');
-		            var percentage = parseInt(percent, 10) / parseInt(100, 10);
-		            var animate = $(this).data('animate');
-		            if (elementPos < topOfWindow + $(window).height() - 30 && !animate) {
-		                $(this).data('animate', true);
-		                $(this).find('.circle').circleProgress({
-		                    startAngle: -Math.PI / 2,
-		                    value: percent / 100,
-		                    thickness: 14,
-		                    fill : {
-		                        color: color
-		                    }
-		                }).on('circle-animation-progress', function (event, progress, stepValue) {
-		                    $(this).find('div').text((stepValue*100).toFixed(1) + "%");
-		                }).stop();
-		            }
-		        });
-		    }
-
-		    // Show animated elements
-		    animateElements();
-		    $(window).scroll(animateElements);
-         });
-      </script>
-	<script src="https://cdn.rawgit.com/kottenator/jquery-circle-progress/1.2.0/dist/circle-progress.js"></script>
-
-  <script >
-    function changeValue(){
-      $('#meuScore').text('0');
-      $('#meuAumento').text('0.00');
-      $('#meuSalario').text('4.086,00');
-    }
-  </script>
-	
-   </body>
+                            <img src="public/img/logo.png" style="margin-top: 40px;margin-left: 17em;"></img>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <script src="public/js/jquery.min.js"></script>
+            <script src="public/js/modal.js"></script>
+            <script src="public/js/circle-progress.js"></script>
+            <script src="public/js/scrollPage.js"></script>
+</body>
 </html>
