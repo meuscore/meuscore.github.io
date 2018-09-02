@@ -69,4 +69,5 @@ function changeValue() {
     $('#meuScore').text('0');
     $('#meuAumento').text('0.00');
     $('#meuSalario').text('4.086,00');
+    $('#percentBar').removeClass('percentagecircle__loader2')
 }

@@ -1,154 +1,97 @@
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <title>Acesso Score</title>
-    <link href="public/css/details.css" rel="stylesheet">
-    <link href="public/css/main.css" rel="stylesheet">
-</head>
-
-<body class="nsc valgrind-auth" style="height: 100%">
-    <ul id="hpane" class="viewport" style="position:fixed !important; overflow: hidden;">
-        <li style="position: absolute; display: block; width: 316.797px; height: 564.609px; left: 0px; margin-left: 0px;">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+      <title>Acesso Score</title>
+      <link href="public/css/details.css" rel="stylesheet">
+      <link href="public/css/main.css" rel="stylesheet">
+   </head>
+   <body class="nsc valgrind-auth" style="height: 100%">
+      <ul id="hpane" class="viewport">
+         <li class="listaUm">
             <section>
-                <img src="public/img/logo.png" style="
-                  width: 82px;
-                  /* margin-left: -255px; */
-                  margin-top: 8px;
-                  ">
-                <div class="nsc__profile__header">
-                    <hr class="vertical">
-                    <div class="nsc__score__chart">
-                        <link rel="stylesheet" href="https://s3.amazonaws.com/s3-ecs-auth-navbar-prd.ecsbr.net/bar/static/css/base.min.css">
-                        <h2 style="
-                        margin-left: -5px;
-                        margin-top: -98px;
-                        ">
-                            Acesso Score
-                            <div style="display: inline-block;">
-                            </div>
-                        </h2>
-                        <div class="nsc__score__chart--circle" style="
-                        margin-top: 89px;
-                        ">
-                            <div class="percentagecircle__circle" style="width: 110px;height: 110px;border-radius: 55px;background-color: rgb(227, 227, 227);">
-                                <div class="percentagecircle__left-wrap" style="width: 0;height: 115px;left: 0px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;background-color: #F0047F;transform: rotate(180deg);">
-                                    <div class="percentagecircle__loader" style="left: 55px;width: 55px;height: 110px;border-top-left-radius: 0px;border-bottom-left-radius: 0px;background-color: #F0047F;transform: rotate(18deg);"></div>
-                                </div>
-                                <div class="percentagecircle__right-wrap" style="width: 55px; height: 110px; left: 55px;">
-                                    <div class="percentagecircle__loader2" style="left: -55px;width: 55px;height: 115px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;background-color: #F0047F;transform: rotate(180deg);"></div>
-                                </div>
-                                <div style="left: 6px; top: 6px; width: 98px; height: 98px; border-radius: 49px; background-color: rgb(255, 255, 255); z-index: 100;" class="percentagecircle__inner-circle">
-                                    <div><span id="meuScore" class="nsc__score__chart--title" style="color: #F0047F;display: block;">545</span><span class="nsc__score__chart--desc">/1000</span></div>
-                                </div>
-                            </div>
+               <img src="public/img/logo.png" class="logoPosition">
+               <div class="nsc__profile__header">
+                  <hr class="vertical">
+                  <div class="nsc__score__chart">
+                     <h2>
+                        Acesso Score
+                     </h2>
+                     <div class="nsc__score__chart--circle">
+                        <div class="percentagecircle__circle">
+                           <div class="percentagecircle__right-wrap">
+                              <div id="percentBar" class="percentagecircle__loader2"></div>
+                           </div>
+                           <div class="percentagecircle__inner-circle">
+                              <div><span id="meuScore" class="nsc__score__chart--title">545</span><span class="nsc__score__chart--desc">/1000</span></div>
+                           </div>
                         </div>
-                    </div>
-                    <div class="nsc__score__content" style="
-                     padding-bottom: 21px;
-                     ">
-                        <h2 style="
-                        text-align: center;
-                        /* margin-left: 66px; */
-                        ">Você possui direito á <span id="meuAumento"><strong style="color: #F0047F;">R$486.00</strong></span> de aumento</h2>
-                    </div>
-                </div>
+                     </div>
+                  </div>
+                  <div class="nsc__score__content">
+                     <h2>Você possui direito á <span id="meuAumento"><strong>R$486.00</strong></span> de aumento</h2>
+                  </div>
+               </div>
             </section>
             <section>
-                <a href="#" onclick="openModal('Parabéns Richard Henrique', 'Seu novo salário é de R$4086.00, por favor levar ao Departamento Pessoal sua carteira para readequação de salário, no próximo mês seu novo valor já estará disponinel em folha.', 'public/img/congratulations.png');changeValue()" style="text-decoration:none">
-                    <h1 style="
-                     color: #2B2B3A;
-                     margin-left: 231px;
-                     font-size: 15px !important;
-                     margin-top: 124px;
-                     ">Meu Salário</h1>
-                    <h1 style="
-                     font-size: 12px !important;
-                     margin-top: -15px;
-                     margin-left: 245px;
-                     "><b style="
-                     color: #822153;
-                     "><span id="meuSalario">R$3.600,00</span></b></h1>
-                    <h1 style="
-                     color: #2B2B3A;
-                     font-size: 7px !important;
-                     margin-top: -19px;
-                     margin-left: 252px;
-                     ">Solicitar Aumento</h1>
-                </a>
+               <a href="#" onclick="openModal('Parabéns Richard Henrique', 'Seu novo salário é de R$4086.00, por favor levar ao Departamento Pessoal sua carteira para readequação de salário, no próximo mês seu novo valor já estará disponinel em folha.', 'public/img/congratulations.png');changeValue()">
+                  <h1 class="meuSalario">Meu Salário</h1>
+                  <h1 class="salario"><b><span id="meuSalario">R$3.600,00</span></b></h1>
+                  <h1 class="solicitarAumento">Solicitar Aumento</h1>
+               </a>
             </section>
-        </li>
-        <li style="background-color: rgb(43, 43, 58); position: absolute; display: block; width: 316.797px; height: 564.609px; left: 316.797px; margin-left: 0px;">
+         </li>
+         <li class="listaDois">
             <ul class='circleLiar'>
-                <li>
-                    <div class="progressbar" data-animate="false">
-                        <div class="circle" color="black" data-percent="93">
-                            <div></div>
-                            <p>CORUJÃO ACESSO <a onclick="openModal('CORUJÃO ACESSO', 'O corujão acesso é dedicado aos seres que extendem suas atividades ao extremo, pessoas que muitas vezes ficam alem do seu horario,passando de 8, 12, 15 horas trabalhando e fazendo seu tabalho com total dedicação, seja home office ou presencial', 'public/img/coruja.svg')" href="#"><img src="public/img/info.png" style="
-                width: 10px;
-                margin-left: 15em;
-                margin-top: -12px;
-            "><img></a></p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="progressbar" data-animate="false">
-                        <div class="circle" color="green" data-percent="30.5">
-                            <div></div>
-                            <p>DESEMPENHO <a onclick="openModal('SEU DESEMPENHO', 'No ultimo trimetre você preencheu 3 das 12 avaliações semanais. Você foi avaliado avaliado em 40% pelo seu head na avaliação trimestral.', 'public/img/desempenho.png')" href="#"><img src="public/img/info.png" style="
-                width: 10px;
-                margin-left: 15em;
-                margin-top: -12px;
-            "><img></a></p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="progressbar" data-animate="false">
-                        <div class="circle" color="#ff4400d1" data-percent="58">
-                            <div></div>
-                            <p>DEU SHOW <a href="#"><img onclick="openModal('DEU SHOW', 'Durante o ultimo trimestre, você indicou 162 pessoas para o deu show, foi indicado por 462 pessoas e ganhou 2 vezes.', 'public/img/deushow.png')" src="public/img/info.png" style="
-                width: 10px;
-                margin-left: 15em;
-                margin-top: -12px;
-            "><img></a></p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="progressbar" data-animate="false">
-                        <div class="circle" color="#025aa5" data-percent="49">
-                            <div></div>
-                            <p>RUI JORDÃO <a onclick="openModal('TROFEU RUI JORDÃO', 'O Trofeu Rui Jordão é entregue aos seres acessos que se destacam no ano, durante o periodo que você entrou na acesso, concorreu a 3 vezes ao prémio e ganhou 1.', 'public/img/medalha.png')" href="#"><img src="public/img/info.png" style="
-                width: 10px;
-                margin-left: 15em;
-                margin-top: -12px;
-            "><img></a></p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-
-                    <div class="progressbar" data-animate="false">
-                        <div class="circle" color="#F0047F" data-percent="38">
-                            <div></div>
-                            <p>SER MERECEDOR <a onclick="openModal('SER MERECEDOR', 'O Trofeu Ser Merecedor é entregue aos seres acessos que se destacam no ano, durante o periodo que você entrou na acesso, concorreu a 6 vezes ao prémio e ganhou 3.', 'public/img/medalha.png')" href="#"><img src="public/img/info.png" style="
-                width: 10px;
-                margin-left: 15em;
-                margin-top: -12px;
-            "><img></a></p>
-
-                            <img src="public/img/logo.png" style="margin-top: 40px;margin-left: 17em;"></img>
-                        </div>
-                    </div>
-                </li>
+               <li>
+                  <div class="progressbar" data-animate="false">
+                     <div class="circle" color="black" data-percent="93">
+                        <div></div>
+                        <p>CORUJÃO ACESSO <a onclick="openModal('CORUJÃO ACESSO', 'O corujão acesso é dedicado aos seres que extendem suas atividades ao extremo, pessoas que muitas vezes ficam alem do seu horario,passando de 8, 12, 15 horas trabalhando e fazendo seu tabalho com total dedicação, seja home office ou presencial', 'public/img/coruja.svg')" href="#"><img src="public/img/info.png" class="infoClass"><img></a></p>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="progressbar" data-animate="false">
+                     <div class="circle" color="green" data-percent="30.5">
+                        <div></div>
+                        <p>DESEMPENHO <a onclick="openModal('SEU DESEMPENHO', 'No ultimo trimetre você preencheu 3 das 12 avaliações semanais. Você foi avaliado avaliado em 40% pelo seu head na avaliação trimestral.', 'public/img/desempenho.png')" href="#"><img src="public/img/info.png" class="infoClass"><img></a></p>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="progressbar" data-animate="false">
+                     <div class="circle" color="#ff4400d1" data-percent="58">
+                        <div></div>
+                        <p>DEU SHOW <a href="#"><img onclick="openModal('DEU SHOW', 'Durante o ultimo trimestre, você indicou 162 pessoas para o deu show, foi indicado por 462 pessoas e ganhou 2 vezes.', 'public/img/deushow.png')" src="public/img/info.png" class="infoClass"><img></a></p>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="progressbar" data-animate="false">
+                     <div class="circle" color="#025aa5" data-percent="49">
+                        <div></div>
+                        <p>RUI JORDÃO <a onclick="openModal('TROFEU RUI JORDÃO', 'O Trofeu Rui Jordão é entregue aos seres acessos que se destacam no ano, durante o periodo que você entrou na acesso, concorreu a 3 vezes ao prémio e ganhou 1.', 'public/img/medalha.png')" href="#"><img src="public/img/info.png" class="infoClass"><img></a></p>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="progressbar" data-animate="false">
+                     <div class="circle" color="#F0047F" data-percent="38">
+                        <div></div>
+                        <p>SER MERECEDOR <a onclick="openModal('SER MERECEDOR', 'O Trofeu Ser Merecedor é entregue aos seres acessos que se destacam no ano, durante o periodo que você entrou na acesso, concorreu a 6 vezes ao prémio e ganhou 3.', 'public/img/medalha.png')" href="#"><img src="public/img/info.png" class="infoClass"><img></a>
+                        </p>
+                     </div>
+                  </div>
+               </li>
             </ul>
-            <script src="public/js/jquery.min.js"></script>
-            <script src="public/js/modal.js"></script>
-            <script src="public/js/circle-progress.js"></script>
-            <script src="public/js/scrollPage.js"></script>
-</body>
+            <img src="public/img/logo.png" class="logoRodape" />
+         </li>
+      </ul>
+   </body>
+   <script src="public/js/jquery.min.js"></script>
+   <script src="public/js/functions.js"></script>
+   <script src="public/js/circle-progress.js"></script>
+   <script src="public/js/scrollPage.js"></script>
 </html>

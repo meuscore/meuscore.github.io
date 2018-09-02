@@ -1,3 +1,7 @@
+a {
+	text-decoration:none !important;
+}
+
 .modal {
 	position: absolute;
 	top: 11px;
@@ -34,6 +38,8 @@
 }
 
 .viewport {
+	position:fixed !important;
+	overflow: hidden;
 	margin-top: -50px;
 	width: 100%;
 	height: 100%;
@@ -126,4 +132,63 @@
 	margin-left: 93px;
 	/* text-align: center; */
 	margin-top: 29px;
+}
+
+.infoClass {
+	width: 10px;
+	margin-left: 15em;
+	margin-top: -12px;
+}
+
+.logoPosition {
+	width: 82px;
+	margin-top: 8px;
+}
+
+.logoRodape {
+	margin-top: 40px;
+	margin-left: 17em;
+}
+
+.listaUm {
+	position: absolute;
+	display: block;
+	width: 316.797px;
+	height: 564.609px;
+	left: 0px;
+	margin-left: 0px;
+}
+
+.listaDois {
+	background-color: rgb(43, 43, 58);
+	position: absolute;
+	display: block;
+	width: 316.797px;
+	height: 564.609px;
+	left: 316.797px;
+	margin-left: 0px;
+}
+
+.meuSalario {
+	color: #2B2B3A;
+	margin-left: 231px;
+	font-size: 15px !important;
+	margin-top: 124px;
+}
+
+.salario {
+	font-size: 12px !important;
+	margin-top: -15px;
+	margin-left: 245px;
+}
+
+.salario b {
+	color: #822153;
+}
+
+.solicitarAumento {
+	color: #2B2B3A;
+	font-size: 7px !important;
+	margin-top: -19px;
+	margin-left: 252px;
 }
