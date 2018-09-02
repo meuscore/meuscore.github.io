@@ -12,7 +12,7 @@ function openModal(title, textModal, imgModal) {
             overlay: true,
             closeKey: 27
         },
-        modalTmp = $('<div class="modal"><div id="loader"><div></div>').append('<div class="title">' + title + '</div><div class="textModal">' + textModal + '</div><img class="imgModal" src="' + imgModal + '"/><a href="#" class="modal-close"><img style="width: 26px;margin-left: -19em;opacity: 0.65;" src="public/img/arrow.png"></img></a>');
+        modalTmp = $('<div class="modal" id="myModal"><div id="loader"><div></div>').append('<div class="title">' + title + '</div><div class="textModal">' + textModal + '</div><img class="imgModal" src="' + imgModal + '"/><a href="#" class="modal-close"><img style="width: 26px;margin-left: -19em;opacity: 0.65;" src="public/img/arrow.png"></img></a>');
     overlay = $(document.createElement('div')).addClass('modal-overlay').css('opacity', 0.8);
 
     $.modal = function(msg, options) {
@@ -47,6 +47,7 @@ function openModal(title, textModal, imgModal) {
             });
             overlay.fadeOut();
             isOpen = false;
+            closeModal();
         });
 
         $(document).on('click touchend', '.modal-overlay, .modal-close', function(e) {
@@ -67,7 +68,11 @@ $('a').click(function() {
 
 function changeValue() {
     $('#meuScore').text('0');
-    $('#meuAumento').text('0.00');
-    $('#meuSalario').text('4.086,00');
+    $('#meuAumento').text('R$ 0');
+    $('#meuSalario').text('R$4.086,00');
     $('#percentBar').removeClass('percentagecircle__loader2')
+}
+
+function closeModal(){
+    $('#myModal').remove();
 }
