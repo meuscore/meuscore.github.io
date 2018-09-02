@@ -44,10 +44,10 @@ function openModal(title, textModal, imgModal) {
                 $(this).contents().filter(function() {
                     return !$(this).is('.modal-close');
                 }).remove();
+                closeModal();
             });
             overlay.fadeOut();
             isOpen = false;
-            closeModal();
         });
 
         $(document).on('click touchend', '.modal-overlay, .modal-close', function(e) {
@@ -74,6 +74,6 @@ function changeValue() {
 }
 
 function closeModal(){
-    $('#myModal').remove();
     $('.modal-overlay').remove();
+    $('#myModal').remove();
 }
