@@ -8,9 +8,8 @@ a {
 
 .modal {
 	position: absolute;
-	top: 11px;
 	width: 100%;
-	height: 89%;
+	height: 80%;
 	z-index: 999;
 	background: #fff;
 	background: -webkit-linear-gradient(#fff, whiteSmoke);
